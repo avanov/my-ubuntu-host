@@ -1,0 +1,33 @@
+- hosts: default
+  sudo: yes
+  tasks:
+    - name: Add repositories
+      apt_repository:
+        repo: "{{ item }}"
+        state: present
+        update_cache: yes
+      with_items:
+        - "ppa:teatime/ppa"
+
+    - name: Install packages
+      apt:
+        pkg: "{{ item }}"
+        state: present
+      with_items:
+        # system
+        - mc
+        - synaptic
+        # devtools
+        - git
+        - mercurial
+        - gcc
+        - m4
+        - opam
+        - python-pip
+        - python-virtualenv
+        # fonts
+        - fonts-dejavu
+        - ttf-mscorefonts-installer
+        # utils
+        - calibre
+        - teatime-unity 
