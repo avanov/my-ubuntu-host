@@ -25,6 +25,7 @@
         - opam
         - python-pip
         - python-virtualenv
+        - openjdk-8-jre
         # fonts
         - fonts-dejavu
         - ttf-mscorefonts-installer
