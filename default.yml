@@ -1,5 +1,11 @@
 - hosts: default
   sudo: yes
+  roles:
+    - role: sysctl
+      sysctl_settings:
+        fs.file-max: 200000
+        fs.inotify.max_user_watches: 524288
+
   tasks:
     - name: Add repositories
       apt_repository:

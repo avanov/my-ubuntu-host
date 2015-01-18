@@ -1,0 +1,13 @@
+---
+- name: Add custom settings
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: root
+    group: root
+    mode: "0644"
+  with_items:
+    - src: 60-machine-custom-settings.conf.j2
+      dest: /etc/sysctl.d/60-machine-custom-settings.conf
+  notify:
+    - restart sysctl
