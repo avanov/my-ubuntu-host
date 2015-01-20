@@ -28,6 +28,7 @@
         - mercurial
         - gcc
         - virtualbox
+        - docker.io
         - pgadmin3
 
         # OPAM and dependencies
