@@ -23,6 +23,9 @@
         # system
         - mc
         - synaptic
+        - language-pack-de
+        - language-pack-gnome-de
+        - firefox-locale-de
         # devtools
         - git
         - mercurial
