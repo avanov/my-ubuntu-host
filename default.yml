@@ -26,6 +26,9 @@
         - language-pack-de
         - language-pack-gnome-de
         - firefox-locale-de
+        # desktop apps
+        - vlc
+        - banshee
         # devtools
         - git
         - mercurial
